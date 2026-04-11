@@ -1,6 +1,7 @@
-import PageTitle from "../components/PageTitle.jsx";
-import Tarjeta from "../components/Tarjeta.jsx";
+import PageTitle from "../../../src/components/ui/PageTitle.jsx";
+import Tarjeta from "./components/Tarjeta.jsx";
 import { Box, Stack } from "@mui/material";
+import Navbar from "../../../src/components/layout/Navbar.jsx";
 
 function Ficha00() {
   const tarjetas = [
@@ -22,6 +23,7 @@ function Ficha00() {
   ];
 
   return (
+    
     <Box
       sx={{
         flex: 1,
@@ -31,6 +33,7 @@ function Ficha00() {
         width: "100%",
       }}
     >
+      <Navbar></Navbar>
       <PageTitle>Ficha-00</PageTitle>
       <Box
         sx={{

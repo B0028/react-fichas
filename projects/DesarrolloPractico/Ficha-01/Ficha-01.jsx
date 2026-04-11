@@ -1,7 +1,8 @@
-import Contador from "../components/Contador.jsx";
-import MostrarOcultar from "../components/MostrarOcultar.jsx";
-import PageTitle from "../components/PageTitle.jsx";
+import Contador from "./components/Contador.jsx";
+import MostrarOcultar from "./components/MostrarOcultar.jsx";
+import PageTitle from "../../../src/components/ui/PageTitle.jsx";
 import { Box, Stack, Typography } from "@mui/material";
+import Navbar from "../../../src/components/layout/Navbar.jsx";
 
 function Ficha01() {
   return (
@@ -14,6 +15,7 @@ function Ficha01() {
         width: "100%",
       }}
     >
+      <Navbar></Navbar>
       <PageTitle>Ficha-01</PageTitle>
       <Box
         sx={{

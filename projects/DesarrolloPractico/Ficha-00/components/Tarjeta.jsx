@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material";
-import narutoImg from "../assets/Naruto.jpg";
+import narutoImg from "../assets/images/Naruto.jpg";
 
 function Tarjeta({ nombre, descripcion, link }) {
   return (
