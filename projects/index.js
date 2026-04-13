@@ -15,13 +15,15 @@ export const projects = {
       id: "f00",
       name: "Ficha 00",
       path: "ficha-00",
-      component: Ficha00
+      component: Ficha00,
+      description: "Cards reutilizables"
     },
     {
       id: "f01",
       name: "Ficha 01",
       path: "ficha-01",
-      component: Ficha01
+      component: Ficha01,
+      description: "Contador y renderizado condicional"
     },
   ],
   
@@ -29,15 +31,17 @@ export const projects = {
   teorico: [
     {
       id: "e01",
-      title: "Ejercicio 01",
+      name: "Ejercicio 01",
       path: "ejercicio01",
       component: Ejercicio01,
+      description: "Rick And Morty",
     },
     {
       id: "e02",
-      title: "Ejercicio 02",
+      name: "Ejercicio 02",
       path: "ejercicio02",
       component: Ejercicio02,
+      description: "SPA",
     },
   ],
 };
