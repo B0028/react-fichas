@@ -3,6 +3,7 @@ import { lazy } from "react";
 {/* PRÁCTICO */}
 const Ficha00 = lazy(() => import("./DesarrolloPractico/Ficha-00/Ficha-00"));
 const Ficha01 = lazy(() => import("./DesarrolloPractico/Ficha-01/Ficha-01"));
+const Ficha02 = lazy(() => import("./DesarrolloPractico/Ficha-02/Ficha-02"));
 {/* TEORICO */}
 const Ejercicio01 = lazy(() => import("./DesarrolloTeorico/Ejercicio-01/Ejercicio-01"));
 const Ejercicio02 = lazy(() => import("./DesarrolloTeorico/Ejercicio-02/Ejercicio-02"));
@@ -23,6 +24,13 @@ export const projects = {
       name: "Ficha 01",
       path: "ficha-01",
       component: Ficha01,
+      description: "Contador y renderizado condicional"
+    },
+    {
+      id: "f02",
+      name: "Ficha 02",
+      path: "ficha-02",
+      component: Ficha02,
       description: "Contador y renderizado condicional"
     },
   ],
