@@ -6,12 +6,27 @@ import nartuoxim from "../../projects/DesarrolloPractico/Ficha-00/assets/images/
 
 export default function Home() {
   return (
-    <Box className="content-box">
+    <Box className="content-box" p={5}>
       <Typography variant="h2" sx={{ mb: 2, fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-        Main
+        Portfolio de ejercicios Ánima
       </Typography>
-      <Typography color="text.secondary" sx={{ mb: 2 }}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos repellendus commodi reiciendis fugit ex nesciunt eveniet suscipit eum quae soluta possimus debitis quibusdam corrupti voluptatem doloremque, expedita culpa nulla quam?
+      <Box 
+      sx={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: 655, 
+        mb: 2
+        }}
+      >    
+        <Typography color="text.secondary">
+          Desarrollo Web Full Stack
+        </Typography>
+        <Typography color="text.secondary">
+          año: 2026
+        </Typography>
+      </Box>
+      <Typography variant="h4" sx={{ mb: 2 }}>
+        Bruno Accorenti
       </Typography>
       <Box sx={{
         display: 'flex',
@@ -19,11 +34,12 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'stretch'
       }}>
-        <Card sx={{ width: '100%' }} titulo={"Desarrollo Práctico"} subtitulo={"Prof. Facundo"} descripcion={"?"} link={"http://localhost:5173/desarrollo-practico"} captura={nartuoxim}>
+        <Card sx={{ width: '100%' }} titulo={"Desarrollo Práctico"} subtitulo={"Profesor: Facundo Peréz"} descripcion={"?"} link={"desarrollo-practico"} captura={nartuoxim}>
         </Card>
-        <Card sx={{ width: '100%' }} titulo={"Desarrollo Teorico"} subtitulo={"Prof. Valentina"} descripcion={"?"} link={"http://localhost:5173/desarrollo-teorico"} captura={nartuoxim}>
+        <Card sx={{ width: '100%' }} titulo={"Desarrollo Teorico"} subtitulo={"Profesora: Valentina Baldoni"} descripcion={"?"} link={"desarrollo-teorico"} captura={nartuoxim}>
         </Card>
       </Box>
     </Box>
   );
 }
+

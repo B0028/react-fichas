@@ -1,20 +1,35 @@
 import { Card as MuiCard, CardContent, CardMedia, Link, Typography } from "@mui/material";
-
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 function Card({ titulo, subtitulo, descripcion, link, captura }) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+    navigate(link);
+    };
+
     return (
-        <MuiCard
-            sx={{
-                width: "100%",
-                maxWidth: 300,
-                border: "1px solid",
-                borderColor: "divider",
-                boxShadow: "none",
-                borderRadius: 2,
-                display: "flex",
-                flexDirection: "column",
-            }}
-        >
+        
+      
+    <MuiCard onClick={handleClick}
+        sx={{
+            cursor: 'pointer',
+            width: "100%",
+            maxWidth: 300,
+            border: "1px solid",
+            borderColor: "divider",
+            boxShadow: "none",
+            borderRadius: 2,
+            display: "flex",
+            flexDirection: "column",
+            transition: 'transform 0.2s, box-shadow 0.2s',
+            '&:hover': {
+                transform: 'translateY(-10px)',
+                boxShadow: 24, 
+            },
+        }}
+    >
+        <RouterLink to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
             <CardMedia
                 component="img"
                 height="180"
@@ -31,11 +46,9 @@ function Card({ titulo, subtitulo, descripcion, link, captura }) {
                 <Typography variant="p" color="text.secondary" sx={{ mb: 1.5 }}>
                     {descripcion}
                 </Typography>
-                <Link href={link} target="_blank" rel="noreferrer" underline="hover" >
-                    Ver más
-                </Link>
             </CardContent>
-        </MuiCard>
+        </RouterLink>
+    </MuiCard>
     );
 }
 

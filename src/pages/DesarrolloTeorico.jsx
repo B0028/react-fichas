@@ -9,7 +9,7 @@ function DesarrolloTeorico(params) {
             <Grid container spacing={3}>
                 {projects.teorico.map((ejercicio) => (
                     <Grid key={ejercicio.id} size={{ xs: 12, sm: 6, md: 4, lg: 3 }} display="flex">
-                        <Card titulo={ejercicio.name} subtitulo={ejercicio.description} descripcion={"si"} link={"http://localhost:5173/desarrollo-practico"} captura={nartuoxim}></Card>
+                        <Card titulo={ejercicio.name} subtitulo={ejercicio.description} descripcion={"si"} link={ejercicio.path} captura={nartuoxim}></Card>
                     </Grid>
                 ))}
             </Grid>
