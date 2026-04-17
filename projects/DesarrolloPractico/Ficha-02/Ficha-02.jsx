@@ -1,5 +1,7 @@
-import { Box, Typography, List, ListItemIcon, ListItemText, ListItem } from "@mui/material";
+import { Box, Typography, List, ListItemIcon, ListItemText, ListItem, Grid } from "@mui/material";
 import Navbar from "../../../src/components/layout/Navbar";
+import Card from "../../../src/components/ui/Card";
+import nartuoxim from "../Ficha-00/assets/images/Naruto.jpg"
 
 const gustos = [
     {
@@ -45,26 +47,33 @@ const personas = [
 
 function Ficha02() {
     return (
-        <>
-            <Navbar></Navbar>
-            <Box 
-            sx={{ 
-                justifyContent: "center", 
-                width: 900,
-            }}>
-                <List>
-                    {gustos.map((gusto) => (
-                        <ListItem key={gusto.id}>
+      <>
+        <Navbar></Navbar>
+        <Grid container spacing={20} justifyContent={"center"} alignItems={"center"}>
+          <Grid item xs={12} md={6}>
+              <List>
+                  {gustos.map((gusto) => (
+                      <ListItem key={gusto.id}>
 
-                            <ListItemText
-                                primary= {gusto.name}
-                                secondary= {gusto.tipo}
-                            />
-                        </ListItem>
-                    ))}
-                </List>
-            </Box>
-        </>
+                          <ListItemText
+                              primary= {gusto.name}
+                              secondary= {gusto.tipo}
+                          />
+                      </ListItem>
+                  ))}
+              </List>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid container spacing={6} >
+              {personas.map((persona) => (
+               <Grid item xs={12} sm={6} md={4} key={persona.id}>
+                <Card titulo={persona.name} subtitulo={persona.rol} captura={nartuoxim}></Card>
+               </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
+      </>
     );
 }
 
