@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import Navbar from "../../../src/components/layout/Navbar";
 import Card from "../../../src/components/ui/Card";
+import imgEren from "./assets/images/Eren_Jaeger_29_character_image.webp";
+import imgErwin from "./assets/images/Erwin_Smith_29_character_image_29.webp";
 import imgArmin from "./assets/images/Armin_Arlelt_29_character_image.webp";
 
 // ACTIVIDAD 1.1
