@@ -14,6 +14,10 @@ import Card from "../../../src/components/ui/Card";
 import imgEren from "./assets/images/Eren_Jaeger_29_character_image.webp";
 import imgErwin from "./assets/images/Erwin_Smith_29_character_image_29.webp";
 import imgArmin from "./assets/images/Armin_Arlelt_29_character_image.webp";
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 
 // ACTIVIDAD 1.1
@@ -39,6 +43,10 @@ const gustos = [
     tipo: "Libro",
   },
 ];
+const iconMap = {
+  "Libro": <AutoStoriesIcon />,
+  "Documental YT": <YouTubeIcon />,
+};
 
 // ACTIVIDAD 1.2
 const personas = [
@@ -102,6 +110,8 @@ const lista = [
   },
 ];
 
+
+
 function Ficha02() {
   const [mostrar, setMostrar] = useState(false);
 
@@ -137,7 +147,9 @@ function Ficha02() {
           <List>
             {gustos.map((gusto) => (
               <ListItem key={gusto.id}>
-
+                <ListItemIcon>
+                  {iconMap[gusto.tipo] || <AutoStoriesIcon />}
+                </ListItemIcon>
                 <ListItemText primary={gusto.name} secondary={gusto.tipo} />
               </ListItem>
             ))}
@@ -196,8 +208,9 @@ function Ficha02() {
               color="primary"
               onClick={() => setMostrar(!mostrar)}
               sx={{ boxShadow: "none" }}
+              endIcon={mostrar ? <ExpandLessIcon /> : <ExpandMoreIcon />}
             >
-              {mostrar ? "Ocultar Lista" : "Desplegar Lista"}
+              {mostrar ? "Ocultar Lista" : "Desplegar Lista" }
             </Button>
 
           </Box>
