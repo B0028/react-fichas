@@ -16,6 +16,7 @@ function Card({ titulo, subtitulo, descripcion, link, captura }) {
             cursor: 'pointer',
             width: "100%",
             maxWidth: 300,
+            height: "100%",
             border: "1px solid",
             borderColor: "divider",
             boxShadow: "none",
@@ -29,14 +30,14 @@ function Card({ titulo, subtitulo, descripcion, link, captura }) {
             },
         }}
     >
-        <RouterLink to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <RouterLink to={link} style={{ textDecoration: 'none', color: 'inherit', height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardMedia
                 component="img"
                 height="180"
                 image={captura}
                 alt={titulo}
             />
-            <CardContent sx={{ alignItems: 'stretch' }}>
+            <CardContent sx={{ alignItems: 'stretch', flexGrow: 1 }}>
                 <Typography variant="h6" sx={{ mb: 1 }}>
                     {titulo}
                 </Typography>

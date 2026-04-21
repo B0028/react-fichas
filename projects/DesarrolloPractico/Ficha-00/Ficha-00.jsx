@@ -23,7 +23,7 @@ function Ficha00() {
   ];
 
   return (
-    
+
     <Box
       sx={{
         flex: 1,
@@ -46,8 +46,8 @@ function Ficha00() {
           py: 2,
         }}
       >
-        <Stack spacing={4} alignItems="center" sx={{ width: "100%" }}>
-          <Stack direction={{ xs: "column", md: "row" }} spacing={2} justifyContent="center">
+        <Stack spacing={4} sx={{ width: "100%", alignItems: "center" }}>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={2} sx={{ justifyContent: "center" }}>
             {tarjetas.map((tarjeta) => (
               <Tarjeta
                 key={tarjeta.nombre}

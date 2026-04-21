@@ -15,6 +15,7 @@ import imgEren from "./assets/images/Eren_Jaeger_29_character_image.webp";
 import imgErwin from "./assets/images/Erwin_Smith_29_character_image_29.webp";
 import imgArmin from "./assets/images/Armin_Arlelt_29_character_image.webp";
 
+
 // ACTIVIDAD 1.1
 const gustos = [
   {
@@ -108,18 +109,19 @@ function Ficha02() {
     <>
       <Navbar></Navbar>
 
-      
+
       <Grid
         container
         spacing={1}
-        justifyContent={"center"}
-        alignItems={"flex-start"}
+        sx={{
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+        }}
       >
 
 
-      {/* ACTIVIDAD 1.1 */}
+        {/* ACTIVIDAD 1.1 */}
         <Grid
-          item
           size={{ xs: 12, md: 6 }}
           sx={{
             p: 2,
@@ -135,6 +137,7 @@ function Ficha02() {
           <List>
             {gustos.map((gusto) => (
               <ListItem key={gusto.id}>
+
                 <ListItemText primary={gusto.name} secondary={gusto.tipo} />
               </ListItem>
             ))}
@@ -142,9 +145,8 @@ function Ficha02() {
         </Grid>
 
 
-      {/* ACTIVIDAD 1.2 */}
+        {/* ACTIVIDAD 1.2 */}
         <Grid
-          item
           size={{ xs: 12, md: 6 }}
           sx={{
             p: 2,
@@ -157,9 +159,9 @@ function Ficha02() {
           <Typography variant="h4" sx={{ mb: 2, width: "100%", textAlign: "left" }}>
             Actividad práctica 1.2 – Tarjetas desde una lista
           </Typography>
-          <Grid container spacing={1} sx={{width: "100%"}}>
+          <Grid container spacing={1} sx={{ width: "100%" }}>
             {personas.map((persona) => (
-              <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={persona.id}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={persona.id}>
                 <Card
                   titulo={persona.name}
                   subtitulo={persona.status}
@@ -173,7 +175,6 @@ function Ficha02() {
 
         {/* ACTIVIDAD 1.3 */}
         <Grid
-          item
           size={{ xs: 12, md: 6 }}
           sx={{
             p: 2,
@@ -200,24 +201,23 @@ function Ficha02() {
             </Button>
 
           </Box>
-            {mostrar && (
-              <List>
-                {lista.map((iteml, index) => (
-                  <ListItem key={iteml.id}>
-                    <ListItemText
-                      primary={`${index + 1}). ${iteml.name}`}
-                      secondary={iteml.descripcion}
-                    />
-                  </ListItem>
-                ))}
-              </List>
-            )}
+          {mostrar && (
+            <List>
+              {lista.map((iteml, index) => (
+                <ListItem key={iteml.id}>
+                  <ListItemText
+                    primary={`${index + 1}). ${iteml.name}`}
+                    secondary={iteml.descripcion}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          )}
         </Grid>
 
 
         {/* */}
         <Grid
-          item
           size={{ xs: 12, md: 6 }}
           sx={{
             p: 2,
@@ -233,13 +233,3 @@ function Ficha02() {
 }
 
 export default Ficha02;
-
-/**
- *                         <ListItemIcon>
-                            {gusto.tipo = "Libro" ? <AutoStoriesIcon /> : <YouTubeIcon />}
-                        </ListItemIcon>
-
-                        import { AutoStoriesIcon, YouTubeIcon } from '@mui/icons-material';
-
-
- */

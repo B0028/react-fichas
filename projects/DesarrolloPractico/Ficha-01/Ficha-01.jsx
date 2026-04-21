@@ -28,19 +28,21 @@ function Ficha01() {
           py: 2,
         }}
       >
-        <Stack spacing={3} alignItems="center" sx={{ width: "100%", maxWidth: 900 }}>
+        <Stack spacing={3} sx={{ width: "100%", maxWidth: 900, alignItems: "center" }}>
           <Stack
             direction={{ xs: "column", md: "row" }}
             spacing={3}
-            justifyContent="center"
-            alignItems="stretch"
-            sx={{ width: "100%" }}
+            sx={{ 
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "stretch"
+            }}
           >
-            <Stack spacing={1} alignItems="center" sx={{ flex: 1 }}>
+            <Stack spacing={1} sx={{ flex: 1, alignItems: "center" }}>
               <Typography variant="h4">Contador</Typography>
               <Contador />
             </Stack>
-            <Stack spacing={1} alignItems="center" sx={{ flex: 1 }}>
+            <Stack spacing={1} sx={{ flex: 1, alignItems: "center" }}>
               <Typography variant="h4">Mostrar / ocultar</Typography>
               <MostrarOcultar />
             </Stack>
