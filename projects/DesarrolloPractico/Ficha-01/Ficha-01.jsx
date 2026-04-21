@@ -16,7 +16,7 @@ function Ficha01() {
       }}
     >
       <Navbar></Navbar>
-      <PageTitle>Ficha-01</PageTitle>
+      <PageTitle subtext="Contador">Ficha-01</PageTitle>
       <Box
         sx={{
           flex: 1,

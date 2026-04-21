@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import { projects } from "../../projects";
 import Card from "../components/ui/Card"
-import nartuoxim from "../../projects/DesarrolloPractico/Ficha-00/assets/images/Naruto.jpg"
+
 
 function DesarrolloTeorico(params) {
     return (
@@ -9,7 +9,12 @@ function DesarrolloTeorico(params) {
             <Grid container spacing={3}>
                 {projects.teorico.map((ejercicio) => (
                     <Grid key={ejercicio.id} size={{ xs: 12, sm: 6, md: 4, lg: 3 }} display="flex">
-                        <Card titulo={ejercicio.name} subtitulo={ejercicio.description} descripcion={"si"} link={ejercicio.path} captura={nartuoxim}></Card>
+                        <Card 
+                        titulo={ejercicio.name} 
+                        subtitulo={ejercicio.description} 
+                        descripcion={ejercicio.tecnologias} 
+                        link={ejercicio.path} 
+                        captura={ejercicio.capture}></Card>
                     </Grid>
                 ))}
             </Grid>

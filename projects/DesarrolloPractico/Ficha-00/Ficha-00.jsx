@@ -2,23 +2,29 @@ import PageTitle from "../../../src/components/ui/PageTitle.jsx";
 import Tarjeta from "./components/Tarjeta.jsx";
 import { Box, Stack } from "@mui/material";
 import Navbar from "../../../src/components/layout/Navbar.jsx";
+import Nagato from "./assets/images/Nagato.jpg"
+import Yahiko from "./assets/images/Yahiko.jpg"
+import Konan from "./assets/images/Konan.jpg"
 
 function Ficha00() {
   const tarjetas = [
     {
-      nombre: "Naruto Uzumaki",
-      descripcion: "Ninja de Konoha con el objetivo de ser Hokage.",
-      link: "https://naruto-official.com/en",
+      nombre: "Nagato",
+      descripcion: "長門",
+      link: "https://naruto.fandom.com/es/wiki/Nagato",
+      picture: Nagato
     },
     {
-      nombre: "Gaara",
-      descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      link: "#",
+      nombre: "Yahiko",
+      descripcion: "弥彦",
+      link: "https://naruto.fandom.com/es/wiki/Yahiko",
+      picture: Yahiko
     },
     {
-      nombre: "Jiraiya",
-      descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      link: "#",
+      nombre: "Konan",
+      descripcion: "小南",
+      link: "https://naruto.fandom.com/es/wiki/Konan",
+      picture: Konan
     },
   ];
 
@@ -54,6 +60,7 @@ function Ficha00() {
                 nombre={tarjeta.nombre}
                 descripcion={tarjeta.descripcion}
                 link={tarjeta.link}
+                picture={tarjeta.picture}
               />
             ))}
           </Stack>

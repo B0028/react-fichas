@@ -18,6 +18,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import PageTitle from "../../../src/components/ui/PageTitle.jsx";
 
 
 // ACTIVIDAD 1.1
@@ -118,7 +119,7 @@ function Ficha02() {
   return (
     <>
       <Navbar></Navbar>
-
+      <PageTitle subtext="Listas">Ficha-02</PageTitle>
 
       <Grid
         container

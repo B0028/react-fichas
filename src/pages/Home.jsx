@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Card from "../components/ui/Card";
-import nartuoxim from "../../projects/DesarrolloPractico/Ficha-00/assets/images/Naruto.jpg"
+import practicoIMG from "../assets/images/Practimg.jpg"
+import teoricoIMG from "../assets/images/Teorimg.jpg"
 
 
 
@@ -34,9 +35,19 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'stretch'
       }}>
-        <Card sx={{ width: '100%' }} titulo={"Desarrollo Práctico"} subtitulo={"Profesor: Facundo Peréz"} descripcion={"?"} link={"desarrollo-practico"} captura={nartuoxim}>
+        <Card sx={{ width: '100%' }} 
+        titulo={"Desarrollo Práctico"} 
+        subtitulo={"Profesor: Facundo Peréz"} 
+        descripcion={"React"} 
+        link={"desarrollo-practico"} 
+        captura={practicoIMG}>
         </Card>
-        <Card sx={{ width: '100%' }} titulo={"Desarrollo Teorico"} subtitulo={"Profesora: Valentina Baldoni"} descripcion={"?"} link={"desarrollo-teorico"} captura={nartuoxim}>
+        <Card sx={{ width: '100%' }} 
+        titulo={"Desarrollo Teorico"} 
+        subtitulo={"Profesora: Valentina Baldoni"} 
+        descripcion={"React"} 
+        link={"desarrollo-teorico"} 
+        captura={teoricoIMG}>
         </Card>
       </Box>
     </Box>

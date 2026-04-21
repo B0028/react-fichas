@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import { projects } from "../../projects";
 import Card from "../components/ui/Card"
-import nartuoxim from "../../projects/DesarrolloPractico/Ficha-00/assets/images/Naruto.jpg"
+
 
 function DesarrolloPractico(params) {
     return (
@@ -16,9 +16,9 @@ function DesarrolloPractico(params) {
                         <Card 
                             titulo={ejercicio.name} 
                             subtitulo={ejercicio.description} 
-                            descripcion={"si"} 
+                            descripcion={ejercicio.tecnologias} 
                             link={ejercicio.path} 
-                            captura={nartuoxim}>
+                            captura={ejercicio.capture}>
                         </Card>
                     </Grid>
                 ))}
