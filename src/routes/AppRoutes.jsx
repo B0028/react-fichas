@@ -1,16 +1,54 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import App from "../App.jsx";
-import Ficha00 from "../pages/Ficha-00.jsx";
-import Ficha01 from "../pages/Ficha-01.jsx";
+import { Suspense } from "react";
+
+// HOME
+import PortFolio from "../layouts/PortFolio.jsx";
+import Home from "../pages/Home.jsx"
+import About from "../pages/About.jsx"
+import DashboardPractico from "../pages/DesarrolloPractico.jsx"
+import DashboardTeorico from "../pages/DesarrolloTeorico.jsx"
+
+// EJERCICIOS
+import Exercises from "../layouts/Exercises.jsx";
+import { projects } from "../../projects"
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Navigate to="ficha-00" replace />} />
-        <Route path="ficha-00" element={<Ficha00 />} />
-        <Route path="ficha-01" element={<Ficha01 />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<div>Cargando...</div>}>
+      <Routes>
+
+        {/* HOME / PORTFOLIO */}
+        <Route path="/" element={<PortFolio />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="desarrollo-practico" element={<DashboardPractico />} />
+          <Route path="desarrollo-teorico" element={<DashboardTeorico />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+
+        {/* DESARROLLO PRÁCTICO */}
+        <Route path="/desarrollo-practico" element={<Exercises />}>
+          {projects.practico.map((ejercicio) => (
+            <Route
+              key={ejercicio.id}
+              path={ejercicio.path}
+              element={<ejercicio.component />}
+            />
+          ))}
+        </Route>
+
+        {/* DESARROLLO TEÓRICO */}
+        <Route path="/desarrollo-teorico" element={<Exercises />}>
+          {projects.teorico.map((ejercicio) => (
+            <Route
+              key={ejercicio.id}
+              path={ejercicio.path}
+              element={<ejercicio.component />}
+            />
+          ))}
+        </Route>
+
+      </Routes>
+    </Suspense>
   );
 }

@@ -30,10 +30,10 @@ function Navbar() {
         React · Fichas
       </Typography>
       <Box component="nav" aria-label="Principal" sx={{ display: "flex", gap: 2.5 }}>
-        <NavLink style={navLinkStyle} to="/ficha-00">
+        <NavLink style={navLinkStyle} to="/desarrollo-practico/ficha-00">
           Ficha-00
         </NavLink>
-        <NavLink style={navLinkStyle} to="/ficha-01">
+        <NavLink style={navLinkStyle} to="/desarrollo-practico/ficha-01">
           Ficha-01
         </NavLink>
       </Box>

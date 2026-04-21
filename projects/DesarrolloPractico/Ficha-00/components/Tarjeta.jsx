@@ -1,7 +1,6 @@
 import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material";
-import narutoImg from "../assets/Naruto.jpg";
 
-function Tarjeta({ nombre, descripcion, link }) {
+function Tarjeta({ nombre, descripcion, link, picture }) {
   return (
     <Card
       sx={{
@@ -15,8 +14,7 @@ function Tarjeta({ nombre, descripcion, link }) {
     >
       <CardMedia
         component="img"
-        height="180"
-        image={narutoImg}
+        image={picture}
         alt={nombre}
       />
       <CardContent>

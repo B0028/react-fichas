@@ -4,7 +4,7 @@ import { Box, Typography, Stack } from "@mui/material";
  * Título de página: siempre en la misma franja vertical (debajo del navbar),
  * independiente del contenido centrado que va debajo.
  */
-function PageTitle({ children }) {
+function PageTitle({ children, subtext }) {
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ function PageTitle({ children }) {
         <Typography variant="h1" component="h1" sx={{ my: 0 }}>
           {children}
         </Typography>
-        <Typography color="text.secondary">Página de inicio de la ficha</Typography>
+        <Typography color="text.secondary">{subtext}</Typography>
       </Stack>
     </Box>
   );
